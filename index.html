@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Xiaolu的博客</title><meta name="author" content="Xiaolu"><meta name="copyright" content="Xiaolu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Xiaolu的博客">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Xiaolu的博客">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic.imgdb.cn/item/66ffe3dfd29ded1a8cf6b292.jpg">
+<meta property="article:author" content="Xiaolu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/66ffe3dfd29ded1a8cf6b292.jpg"><link rel="shortcut icon" href="https://pic.imgdb.cn/item/66ffe3dfd29ded1a8cf6b292.jpg"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Xiaolu的博客',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-10-05 09:47:13'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://pic.imgdb.cn/item/66ffe3dfd29ded1a8cf6b292.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Xiaolu的博客</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">Xiaolu的博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/10/04/Windows11%20%E5%AE%89%E8%A3%85/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-10-04T12:34:38.361Z" title="Created 2024-10-04 20:34:38">2024-10-04</time></span></div><div class="content">Windows11 安装准备工作 备份数据：在安装之前，请确保备份所有重要文件到外部硬盘或云存储服务！！！！！！！！！ 获取Windows 11安装媒体：你可以从微软官网下载Windows 11的安装文件，并创建一个启动U盘或刻录DVD。 检查硬件兼容性：确保你的电脑满足Windows 11的系统要求。 激活密钥：如果你购买的是零售版Windows 11，需要准备产品密钥。  安装步骤从USB启动安装 设置BIOS&#x2F;UEFI启动顺序：  重启电脑，在启动过程中按下通常是F2、F10、F12或Del键进入BIOS&#x2F;UEFI设置。 找到启动选项，将USB设备设置为第一启动项。 保存设置并退出。   启动Windows安装程序：  电脑将从USB启动并进入Windows安装界面。 选择语言、时间和货币格式，点击“下一步”。 点击“安装Windows”。 如果你的电脑不合格，请看VCR：...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/10/04/QQ/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-10-04T09:49:35.830Z" title="Created 2024-10-04 17:49:35">2024-10-04</time></span></div><div class="content">Xiaolu:My QQ: 2387432536</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/10/04/Windows10%20%E5%AE%89%E8%A3%85/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-10-04T09:45:06.851Z" title="Created 2024-10-04 17:45:06">2024-10-04</time></span></div><div class="content">Windows10 安装准备工作 备份数据：在安装之前，请确保备份所有重要文件到外部硬盘或云存储服务！！！！！！！！！ 获取Windows 10安装媒体：你可以从微软官网下载Windows 10的安装文件，并创建一个启动U盘或刻录DVD。 检查硬件兼容性：确保你的电脑满足Windows 10的系统要求。 激活密钥：如果你购买的是零售版Windows...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/15/macOSBigSur%20/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-15T03:20:51.461Z" title="Created 2024-09-15 11:20:51">2024-09-15</time></span></div><div class="content"> macOS BigSur 11.0.1 20B50 正式版BigSur功能简介11月20日，苹果发布了Big Sur的11.0.1更新版，版本号为20B50，新版本同时支持INTEL&#x2F;ARM平台，支持 RX6800等新设备；未来几年内会渐渐取消对INTEL平台的支持，所以黑苹果的FANS务必要且行且珍惜macOS Big Sur 将强大实力和优美外观的结合提升到一个崭新的高度。精心雕琢的全新设计，让您能淋漓尽致地感受 Mac 的魅力；Safari 浏览器迎来重大更新，待您饱览；地图 App 和信息 App 满载新功能，任您探索；更透明的隐私权限，保护也更周到。 设计• App 的全新设计让您更容易专注于内容，还可通过有效利用空间的工具栏和全高度边栏来进行操作 • 更新后的菜单栏间距更宽，全新的半透明材质在交互时变得更加醒目 • 系统声音得到更新，包括启动铃音以及传输文件、将项目移到废纸篓、锁定文件等操作的声音 控制中心• “控制中心”将您常用的菜单和控制汇于菜单栏中一处，方便您在工作时快速调整设置 • 点按以展开“控制中心”菜单时会显示更多控制 •...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info is-center"><div class="avatar-img"><img src="https://pic.imgdb.cn/item/66ffe3dfd29ded1a8cf6b292.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Xiaolu</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xiaoenlu?tab=repositories"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/04/Windows11%20%E5%AE%89%E8%A3%85/" title="Untitled">Untitled</a><time datetime="2024-10-04T12:34:38.361Z" title="Created 2024-10-04 20:34:38">2024-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/04/QQ/" title="Untitled">Untitled</a><time datetime="2024-10-04T09:49:35.830Z" title="Created 2024-10-04 17:49:35">2024-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/04/Windows10%20%E5%AE%89%E8%A3%85/" title="Untitled">Untitled</a><time datetime="2024-10-04T09:45:06.851Z" title="Created 2024-10-04 17:45:06">2024-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/15/macOSBigSur%20/" title="Untitled">Untitled</a><time datetime="2024-09-15T03:20:51.461Z" title="Created 2024-09-15 11:20:51">2024-09-15</time></div></div></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/10/">
+          <span class="card-archive-list-date">October 2024</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/09/">
+          <span class="card-archive-list-date">September 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">4</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-10-05T01:47:13.294Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By Xiaolu</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
